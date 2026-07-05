@@ -1,0 +1,117 @@
+I want to build a production-quality local AI application called Enterprise Multi-Agent Operations Copilot.
+
+The objective is NOT to build a simple chatbot.
+
+The objective is to build a modular multi-agent system capable of solving enterprise workflows.
+
+Tech Stack
+------------
+Backend:
+- Python
+- FastAPI
+- LangGraph
+- LangChain
+- Ollama (local LLM) with support for Gemini/OpenAI later
+- ChromaDB
+- SQLite
+- Pandas
+- Matplotlib
+- Plotly
+- Python sandbox execution
+
+Frontend:
+- Next.js
+- Tailwind CSS
+- React
+- ShadCN UI
+
+Architecture
+------------
+
+The system should contain independent agents.
+
+1. Planner Agent
+- Understands the user's request.
+- Breaks it into smaller tasks.
+- Creates an execution plan.
+
+2. RAG Agent
+- Reads PDFs.
+- Splits documents.
+- Creates embeddings.
+- Stores vectors in ChromaDB.
+- Retrieves relevant chunks with citations.
+
+3. Data Analysis Agent
+- Reads CSV/Excel files.
+- Performs EDA.
+- Detects missing values.
+- Finds correlations.
+- Generates business insights.
+
+4. Python Execution Agent
+- Generates Python code.
+- Executes inside a sandbox.
+- Returns plots and tables.
+- Retries if execution fails.
+
+5. Report Agent
+- Creates professional Markdown reports.
+- Exports PDF.
+- Generates PowerPoint.
+
+6. Memory Agent
+- Stores conversation history.
+- Stores previous analyses.
+- Supports follow-up questions.
+
+Workflow
+---------
+
+User uploads:
+- PDFs
+- CSVs
+- Excel files
+
+User asks a question.
+
+Planner decides:
+Which agents are required?
+
+The planner then invokes the required agents.
+
+Each agent returns structured outputs.
+
+Planner combines everything into the final answer.
+
+Features
+---------
+
+✓ Multi-agent architecture
+
+✓ LangGraph orchestration
+
+✓ RAG with citations
+
+✓ Local vector database
+
+✓ CSV analytics
+
+✓ Automatic graph generation
+
+✓ Report generation
+
+✓ Python sandbox
+
+✓ Conversation memory
+
+✓ Error handling and retries
+
+✓ Clean UI
+
+The project should be modular, scalable, and easy to extend with additional agents in the future.
+
+Do not put everything in one file. Follow production-level folder structure, clean code, dependency injection where appropriate, logging, configuration files, and reusable components.
+
+also create virtual environment and validate the project and use uv for env
+Generate the project step by step, starting with the architecture and folder structure before writing implementation code.

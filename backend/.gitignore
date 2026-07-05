@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Runtime data
+data/
+logs/
+.env
+
+# Test/demo output
+scripts/received_mail/
+
